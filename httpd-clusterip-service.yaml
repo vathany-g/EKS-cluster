@@ -1,0 +1,16 @@
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: thila-clusterip-service
+  namespace: thila-eks-activity
+spec:
+  type: ClusterIP
+  selector:
+    app: httpd-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 5678
+
